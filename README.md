@@ -50,8 +50,7 @@ Ideal if you just want a **quick score + improvement roadmap** optimized for ATS
 1. Open file: `02.P.CV evaluation process.txt`
 2. **Paste the prompt**
 3. **Attach your CV in PDF** (e.g., `RuiRibeiro.20251126.pdf`)
-4. **Include the JSON from Step 1** in the prompt (copy-paste)
-5. Run the prompt
+4. Run the prompt
 
 > Output:  
 > - Match analysis per requirement  
@@ -66,8 +65,8 @@ Ideal if you just want a **quick score + improvement roadmap** optimized for ATS
 #### Instructions:
 1. Open file: `03.P.Report elaboration.txt`
 2. **Paste the prompt**
-3. **Include both JSONs** (from Step 1 + Step 2)
-4. Run the prompt
+3.  Run the prompt
+
 
 > Output:  
 > - **Full report above JSON** → Save as `.docx` (preserves formatting) or `.txt`  
@@ -101,7 +100,7 @@ Your report will include:
 
 - Use **clean, well-formatted** JD and CV files.
 - Prefer **PDF** for CV (preserves layout).
-- Run the full flow on **at least 2 LLMs** and merge the best action items.
+- Run the full flow on **at least 4 LLMs** and merge the best action items.
 - Update your CV **after each improvement cycle** and re-score.
 - Track progress in a simple table:
 
