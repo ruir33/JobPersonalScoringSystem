@@ -1,46 +1,152 @@
+```markdown
 # JobPersonalScoringSystem
-Job Personal Scoring System.The purpose of all these prompts and steps is to improve your chances to get the job you want/need!
 
+**Job Personal Scoring System**  
+*The purpose of all these prompts and steps is to improve your chances to get the job you want/need!*
 
+---
 
--------------------------------------------------------------------------------------------
-Applying for Jobs with a Personal Scoring System. You also get personalized action plans for skill improvements, to close remaining gaps.
+## Overview
 
-Note: Initially this was created with Grok LLM, but also works with others. If you have the time, I would advise you to perform this also with ChatGPT, Gemini, Claude (and others ...), and compare the results.  Use your common sense, and generate a action plan that you really feel is the right thing to do.
+This system helps you **evaluate your CV against a Job Description (JD)** using a **personal scoring mechanism**. It generates:
 
-Hope this helps you improving your chances to get the job you want/need!  Enjoy! 
+- A **quantitative score** based on how well your profile matches the JD.
+- **Personalized action plans** with realistic timelines to close skill/experience gaps.
+- **ATS-friendly insights** to improve your resume's performance in Applicant Tracking Systems.
 
-Note: You still will have to sweet doing those action plans! Work it out! 
--------------------------------------------------------------------------------------------
+> **Note**: Originally designed with **Grok (xAI)**, but fully compatible with **ChatGPT, Gemini, Claude**, and other LLMs.  
+> For best results: **Run the process across multiple models and compare outputs**. Use your judgment to create a final action plan that *feels right*.
 
-Lazy way (You only care about generating a report with some actions plans to improve your score in the ATS[Application Tracking System] system)
+> **Warning**: You still have to **execute the action plans**! No score improves without effort.
 
-1) Lets gets a JSON file with the weights for each requirement on the Job Description file.
+---
 
-A) Open  www.grok.com
+## Lazy Mode (Fast Report + Action Plans)
 
-B) Paste the prompt that is on file: 01.P.JD info extraction.txt
+Ideal if you just want a **quick score + improvement roadmap** optimized for ATS.
 
-C) Attach the Job Description file:  Example: JD.docx, and execute it.
+---
 
+### Step 1: Extract Weighted Requirements from Job Description
 
-2) Lets Evaluate our CV against the JD
+**Goal**: Generate a JSON with weighted importance for each JD requirement.
 
-A) Paste the prompt that is on file: 02.P.CV evaluation process.txt
+#### Instructions:
+1. Go to **[www.grok.com](https://www.grok.com)** (or your preferred LLM interface)
+2. Open file: `01.P.JD info extraction.txt`
+3. **Paste the prompt**
+4. **Attach your Job Description** (e.g., `JD.docx`, `.pdf`, `.txt`)
+5. Run the prompt
 
-B) Attach your CV in PDF format, example: RuiRibeiro.20251126.pdf, and execute it.
+> Output: JSON with requirements and weights (e.g., `"Python": 25`, `"Leadership": 15`, etc.)
 
-C) The output should include some JSON code
+---
 
+### Step 2: Evaluate Your CV Against the JD
 
-3) Lets generate a report, with score and actions plans
+**Goal**: Score your CV based on the extracted JD weights.
 
-A) Paste the prompt that is on file: 03.P.Report elaboration.txt
+#### Instructions:
+1. Open file: `02.P.CV evaluation process.txt`
+2. **Paste the prompt**
+3. **Attach your CV in PDF** (e.g., `RuiRibeiro.20251126.pdf`)
+4. **Include the JSON from Step 1** in the prompt (copy-paste)
+5. Run the prompt
 
-B) The output should include some report (with your rating and action plans), and also some JSON code.
+> Output:  
+> - Match analysis per requirement  
+> - **JSON with your personal scores**
 
-C) The text above the JSON code, save it in a txt file or in a word docx
-In a word docx, it will keep the format, and will be much more legible.
+---
 
+### Step 3: Generate Final Report + Action Plans
 
-4) In the report, you should have the rating you achived and Personalized Action Plans to Close Remaining Gaps [with timelines like: Immediate (<24h); Really short (1-3 days); Short (1-2 weeks); Short(2-4 weeks); Medium (1-2 months); Medium (1-3 months)]; 
+**Goal**: Get a polished report with your **total score** and **actionable improvement plan**.
+
+#### Instructions:
+1. Open file: `03.P.Report elaboration.txt`
+2. **Paste the prompt**
+3. **Include both JSONs** (from Step 1 + Step 2)
+4. Run the prompt
+
+> Output:  
+> - **Full report above JSON** → Save as `.docx` (preserves formatting) or `.txt`  
+> - **Final JSON** (for tracking/progress)
+
+---
+
+### Step 4: Understand Your Results
+
+Your report will include:
+
+| Section | Description |
+|-------|-----------|
+| **Overall Score** | `/100` – How close you are to the ideal candidate |
+| **Breakdown by Requirement** | Match % per skill/experience |
+| **Personalized Action Plans** | Specific, prioritized steps |
+
+#### Action Plan Timelines
+| Timeline | Duration |
+|--------|----------|
+| `Immediate` | < 24 hours |
+| `Really Short` | 1–3 days |
+| `Short` | 1–2 weeks |
+| `Short+` | 2–4 weeks |
+| `Medium` | 1–2 months |
+| `Medium+` | 1–3 months |
+
+---
+
+## Tips for Best Results
+
+- Use **clean, well-formatted** JD and CV files.
+- Prefer **PDF** for CV (preserves layout).
+- Run the full flow on **at least 2 LLMs** and merge the best action items.
+- Update your CV **after each improvement cycle** and re-score.
+- Track progress in a simple table:
+
+```markdown
+| Requirement | Initial Score | Target | Action Taken | New Score | Date |
+|-------------|---------------|--------|--------------|-----------|------|
+| Python      | 60/100        | 90     | Complete Codecademy Pro | 88/100    | 2025-12-20 |
+```
+
+---
+
+## File Structure (Recommended)
+
+```
+JobPersonalScoringSystem/
+│
+├── JD/
+│   └── YourJobDescription.docx
+├── CV/
+│   └── YourName.20251126.pdf
+├── Prompts/
+│   ├── 01.P.JD info extraction.txt
+│   ├── 02.P.CV evaluation process.txt
+│   └── 03.P.Report elaboration.txt
+├── Outputs/
+│   ├── 01_JD_weights.json
+│   ├── 02_CV_scores.json
+│   ├── 03_Final_Report.docx
+│   └── Action_Plan_Progress.xlsx
+└── README.md
+```
+
+---
+
+## Final Words
+
+> **This is not magic. It’s a mirror.**  
+> The score shows where you stand.  
+> The action plan shows where to go.  
+> **Your effort makes the difference.**
+
+**Good luck — go get that job!**
+
+---
+
+*Created with ❤️ using Grok (xAI) — Works with any LLM*  
+*Last updated: December 2025*
+```
